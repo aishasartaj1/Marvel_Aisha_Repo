@@ -10,6 +10,20 @@ from pandas import json_normalize
 from pprint import pprint as pp
 import string
 from keys import PUBLIC_KEY, PRIVATE_KEY
+import argparse
+
+#Creating the parser
+parser = argparse.ArgumentParser(description='Please provide the Public key, priavte key and initial letter of marvel character')
+parser.add_argument('--public_key', type=str,required = True,
+                    help='provide the Public key')
+parser.add_argument('--private', type=str,required = True,
+                    help='provide the Private key')
+#Parsing the arguments
+ts = 1
+args = parser.parse_args()
+
+
+
 
 #Getting the URL, defining the public and private key, timestamp and limit
 
